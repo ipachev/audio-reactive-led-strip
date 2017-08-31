@@ -6,15 +6,15 @@
 #include "ws2812_i2s.h"
 
 // Set to the number of LEDs in your LED strip
-#define NUM_LEDS 60
+#define NUM_LEDS 144
 // Maximum number of packets to hold in the buffer. Don't change this.
 #define BUFFER_LEN 1024
 // Toggles FPS output (1 = print FPS over serial, 0 = disable output)
 #define PRINT_FPS 1
 
 // Wifi and socket settings
-const char* ssid     = "YOUR_WIFI_SSID";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* ssid     = "Mreja2.4";
+const char* password = "bozaskosmi";
 unsigned int localPort = 7777;
 char packetBuffer[BUFFER_LEN];
 
@@ -25,9 +25,9 @@ WiFiUDP port;
 
 // Network information
 // IP must match the IP in config.py
-IPAddress ip(192, 168, 0, 150);
+IPAddress ip(192, 168, 1, 197);
 // Set gateway to your router's gateway
-IPAddress gateway(192, 168, 0, 1);
+IPAddress gateway(192, 168, 1, 254);
 IPAddress subnet(255, 255, 255, 0);
 
 void setup() {
